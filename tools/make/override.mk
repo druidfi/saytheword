@@ -1,0 +1,2 @@
+CLI_SERVICE=php
+DOCKER_PROJECT_ROOT=/var/www/html

@@ -1,0 +1,40 @@
+{
+    "name": "druidfi/saytheword",
+    "description": "Project template for WordPress project",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "homepage": "https://github.com/druidfi/saytheword",
+    "authors": [
+        {
+            "name": "Druid.fi",
+            "email": "info@druid.fi"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "composer/installers": "^1.2",
+        "johnpbloch/wordpress": "^5.4",
+        "wp-cli/wp-cli": "^2.4"
+    },
+    "extra": {
+        "installer-paths": {
+            "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "preserve-paths": [
+            "public/wp-config.php",
+            "public/wp-content/uploads"
+        ],
+        "wordpress-install-dir": "public"
+    }
+}

@@ -1,0 +1,4 @@
+.idea/
+vendor
+public/*
+!public/wp-config.php
