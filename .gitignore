@@ -1,4 +1,9 @@
 .idea/
 vendor
-public/*
-!public/wp-config.php
+public/*.php
+public/wp-admin
+public/wp-content/index.php
+public/wp-content/plugins/index.php
+public/wp-content/themes/index.php
+public/wp-includes
+debug.log
