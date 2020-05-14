@@ -24,7 +24,7 @@ if (getenv('WP_SITEURL')) {
 }
 
 /** Don't allow core updates on UI */
-define( 'WP_AUTO_UPDATE_CORE', false );
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
