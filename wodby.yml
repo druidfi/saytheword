@@ -10,7 +10,9 @@ pipeline:
     command: cp conf/wodby.wp-config.php public/wp-config.php
     directory: $APP_ROOT
 
-  - name: Run wp-cli
+  - name: Clean up installation
     type: command
-    command: wp --path=/var/www/html/public config list
+    command: |
+      wp --path=/var/www/html/public theme delete twentynineteen twentyseventeen && \
+      wp --path=/var/www/html/public plugin delete akismet hello
     directory: $APP_ROOT
