@@ -41,7 +41,7 @@ services:
 ## For XHProf and Xdebug profiler traces
 #      - files:/mnt/files
     networks:
-      - dev-network
+      - stonehenge-network
       - default
 
   nginx:
@@ -62,12 +62,11 @@ services:
       traefik.frontend.rule: "Host:${WP_HOSTNAME}"
       traefik.frontend.redirect.entryPoint: https
     networks:
-      - dev-network
+      - stonehenge-network
       - default
 
 networks:
-  dev-network:
-    name: stonehenge-network
+  stonehenge-network:
     external: true
 
 volumes:

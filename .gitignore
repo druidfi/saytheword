@@ -3,7 +3,12 @@ vendor
 public/*.php
 public/wp-admin
 public/wp-content/index.php
-public/wp-content/plugins/index.php
-public/wp-content/themes/index.php
+public/wp-content/plugins
+public/wp-content/themes
 public/wp-includes
 debug.log
+
+# Add here custom plugin(s)
+!public/wp-content/plugins/myplugin
+# Add here custom themes(s)
+!public/wp-content/themes/mytheme

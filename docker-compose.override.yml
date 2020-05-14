@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  nginx:
+    labels:
+      # Traefik 2 labels
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-nginx.entrypoints=https"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-nginx.rule=Host(`${WP_HOSTNAME}`)"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-nginx.tls=true"
+      - "traefik.docker.network=stonehenge-network"
