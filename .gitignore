@@ -1,11 +1,13 @@
-.idea/
-vendor
-public/*.php
-public/wp-admin
-public/wp-content/index.php
-public/wp-content/plugins
-public/wp-content/themes
-public/wp-includes
+/.idea/
+/vendor
+/public/*.php
+/public/wp-admin
+/public/wp-content/index.php
+/public/wp-content/plugins
+/public/wp-content/themes
+/public/wp-content/uploads
+/public/wp-includes
+/uploads
 debug.log
 
 # Add here custom plugin(s)

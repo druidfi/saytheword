@@ -9,6 +9,9 @@ PHONY += prepare
 prepare:
 	$(call step,Remove obsolete files)
 	@rm -f $(WEBROOT)/*.{txt,html} $(WEBROOT)/composer.json && printf "Files deleted.\n"
+	$(call step,Set uploads folder)
+	@mkdir -p uploads
+	@ln -fns ../../uploads public/wp-content/uploads
 	$(call step,Copy configuration)
 	@cp -v conf/wp-config.php $(WEBROOT)/wp-config.php
 	$(call step,Delete inactivated plugins)
