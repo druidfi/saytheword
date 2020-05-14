@@ -1,0 +1,5 @@
+pipeline:
+  - name: Install dependencies
+    type: command
+    command: composer install -n --no-dev
+    directory: $APP_ROOT
