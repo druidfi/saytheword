@@ -5,6 +5,11 @@ pipeline:
     command: composer install -n --no-dev
     directory: $APP_ROOT
 
+  - name: Copy wp-config.php
+    type: command
+    command: cp conf/wodby.wp-config.php public/wp-config.php
+    directory: $APP_ROOT
+
   - name: Run wp-cli
     type: command
     command: wp --path=/var/www/html/public config
