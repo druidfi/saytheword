@@ -1,2 +1,3 @@
 CLI_SERVICE=php
+CLI_USER=wodby
 DOCKER_PROJECT_ROOT=/var/www/html

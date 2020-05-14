@@ -12,5 +12,5 @@ pipeline:
 
   - name: Run wp-cli
     type: command
-    command: wp --path=/var/www/html/public config
+    command: wp --path=/var/www/html/public config list
     directory: $APP_ROOT
