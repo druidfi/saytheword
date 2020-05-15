@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc87752f1e003928d57e6e066d1ebbe6",
+    "content-hash": "11e770aa281da53549fd9888243cede2",
     "packages": [
         {
             "name": "composer/installers",
@@ -296,6 +296,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-sitemap-generator/"
+        },
+        {
+            "name": "wpackagist-plugin/lumturio-wp-monitor",
+            "version": "1.0.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/lumturio-wp-monitor/",
+                "reference": "tags/1.0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/lumturio-wp-monitor.1.0.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/lumturio-wp-monitor/"
         },
         {
             "name": "wpackagist-plugin/site-health-tool-manager",
