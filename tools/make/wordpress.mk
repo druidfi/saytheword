@@ -1,9 +1,10 @@
 CLEAN_FOLDERS := public
 WP_DELETE_PLUGINS := akismet hello
 WP_DELETE_THEMES := twentynineteen twentyseventeen
+SYNC_TARGETS += wp-sync
 
 PHONY += fresh
-fresh: clean up build prepare ## Create fresh instance
+fresh: clean up build sync prepare ## Create fresh instance
 
 PHONY += prepare
 prepare:
@@ -32,6 +33,11 @@ PHONY += wp-plugins
 wp-plugins: ## List plugins
 	$(call step,List plugins)
 	$(call wp,plugin list)
+
+PHONY += wp-sync
+wp-sync: ## Sync database & files
+	$(call step,Sync database from WP_SYNC_SOURCE...)
+	$(call step,Sync files from WP_SYNC_SOURCE...)
 
 define wp
 	@${DOCKER_COMPOSE_EXEC} php ${CLI_SHELL} -c "wp --color --path=$(DOCKER_PROJECT_ROOT)/$(WEBROOT) $(1)"

@@ -1,14 +1,14 @@
 # Saytheword
 
-A WordPress example using Composer, Docker and Stonehenge.
+A WordPress example using Composer, Docker, Stonehenge and deployed to Wodby.
 
 ## Environments
 
 Env | Branch | URL
 --- | ------ | ---
 development | * | https://wp.docker.sh/
-testing | dev | TBD
-production | master | TBD
+testing | dev | https://saytheword.druid.fi/
+production | master | nope, this is an example
 
 ## Requirements
 
@@ -27,3 +27,7 @@ $ make fresh
 ```
 
 Ready! Now go to https://wp.docker.sh/ to see your site.
+
+## TODO
+
+- Sync from Wodby server with `make fresh`
