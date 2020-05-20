@@ -37,6 +37,7 @@ wp-plugins: ## List plugins
 PHONY += wp-sync
 wp-sync: ## Sync database & files
 	$(call step,Sync database from WP_SYNC_SOURCE...)
+	@${DOCKER_COMPOSE_EXEC} php ${CLI_SHELL} -c "pwd"
 	$(call step,Sync files from WP_SYNC_SOURCE...)
 
 define wp
